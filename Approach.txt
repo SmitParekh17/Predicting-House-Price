@@ -1,0 +1,48 @@
+Approach:
+
+1) Importing Packages.
+
+2) Loading Data.
+
+3) Outlier checked and Removed in GrLivArea by checking using seaborn's regplot.
+
+4) Separating predictor and target
+
+5) Checking for missing values by plotting bar chart
+
+6) Handling missing values as per the data description
+	i) Filling missing values for few features as 'None'
+	ii) Filling missing value for LotFront feature based on neighbourhood column
+	iii) Filling missing values for few features with 0. 
+	iv) Filling columns with small amount of missing values with Imputer 
+	v) Dropping columns with no variation in values
+
+7) Exploratory Data Analysis and Feature Engineering
+	i) Checking correlation with target variable and selecting features having correlation 0.4 
+	   and above for feature engineering
+	ii) Adding polynomial features and also reciprocol features for non linear relationship between independent and dependent variable.
+	iii) -> Bivariate Analysis of categorical columns
+     	     -> Encoding based on variation of each independent variable with dependent variable
+     	     -> Clustering values in features
+	iv)  -> Bivariate Analysis of numerical columns
+    	     -> Binning few features based on variation
+    	     -> Creating flags for few features
+
+8) Treating skewness 
+
+9) Checking distribution of target variable
+
+10) Applying base model with cross validation
+	i) Linear Regression
+	ii) Decision Tree
+	iii) Random Forest
+	iv) ElasticNet
+	v) Lasso
+	vi) Ridge
+	vii) XGBoost
+
+11) Optimizing good performing models using Grid Search (Too much time to get executed)
+
+12) Feature selection using SelectFromModel
+
+13) Applying StackingRegressor and xgb as meta-regressor
